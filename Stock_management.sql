@@ -10,7 +10,5 @@ ing_name,
 sum(ordered_weight) as ordered_weight
 FROM stock1
 group by ing_name, ing_id) s2
-
-
 LEFT JOIN inventory inv ON inv.item_id=s2.ing_id
 LEFT JOIN ingredient ing ON ing.ing_id=s2.ing_id
